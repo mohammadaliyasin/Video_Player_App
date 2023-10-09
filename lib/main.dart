@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:video_player_app/home.dart';
+import 'VideoPlayerScreen.dart';
 
 void main() {
   runApp(const MyApp());

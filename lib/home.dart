@@ -79,27 +79,3 @@ class _VideoPlayerViewState extends State<VideoPlayerView> {
 
 
 
-class VideoPlayerScreen extends StatelessWidget {
-  const VideoPlayerScreen({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Video Player'),
-      ),
-      body: ListView(
-        padding: const EdgeInsets.all(20),
-        children: const[
-           VideoPlayerView(url: 'assets/videos/nature.mp4',
-          dataSourceType: DataSourceType.asset,
-  
-          ),
-     SizedBox(
-      height: 24,
-    ),
-     VideoPlayerView(url: 'https://drive.google.com/drive/folders/1KXYFruSATnTOJJ0HutStn1djSNcMoQnl',dataSourceType: DataSourceType.network,)
-        ],
-      ),
-    );
-  }
-}
