@@ -62,12 +62,12 @@ class _VideoPlayerViewState extends State<VideoPlayerView> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(widget.dataSourceType.name.toUpperCase(),
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 24,
           fontWeight: FontWeight.bold,
         ),
         ),
-        Divider(),
+        const Divider(),
         AspectRatio(aspectRatio: 16 / 9,
         child: Chewie(controller: _chewieController),
         ),
@@ -85,19 +85,19 @@ class VideoPlayerScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Video Player'),
+        title: const Text('Video Player'),
       ),
       body: ListView(
-        padding: EdgeInsets.all(20),
-        children: [
-          VideoPlayerView(url: 'assets/videos/nature.mp4',
+        padding: const EdgeInsets.all(20),
+        children: const[
+           VideoPlayerView(url: 'assets/videos/nature.mp4',
           dataSourceType: DataSourceType.asset,
   
           ),
-    SizedBox(
+     SizedBox(
       height: 24,
     ),
-    VideoPlayerView(url: 'https://drive.google.com/drive/folders/1KXYFruSATnTOJJ0HutStn1djSNcMoQnl',dataSourceType: DataSourceType.network,)
+     VideoPlayerView(url: 'https://drive.google.com/drive/folders/1KXYFruSATnTOJJ0HutStn1djSNcMoQnl',dataSourceType: DataSourceType.network,)
         ],
       ),
     );
