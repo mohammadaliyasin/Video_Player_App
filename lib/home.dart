@@ -61,17 +61,20 @@ class _VideoPlayerViewState extends State<VideoPlayerView> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(widget.dataSourceType.name.toUpperCase(),
-        style: const TextStyle(
-          fontSize: 24,
+       const Text(
+          // widget.dataSourceType.name.toUpperCase(),
+          'Nature',
+        style:  TextStyle(
+          fontSize: 28,
           fontWeight: FontWeight.bold,
         ),
         ),
-        const Divider(),
-        AspectRatio(aspectRatio: 16 / 9,
+        const SizedBox(
+          height: 5,
+        ),
+        AspectRatio(aspectRatio: 16/9,
         child: Chewie(controller: _chewieController),
         ),
-
       ],
     );
   }
